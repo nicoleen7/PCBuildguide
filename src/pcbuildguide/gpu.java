@@ -14,13 +14,14 @@ public class gpu {
     private String vendor;
     private String make;
     private String model;
-    private double coreclock;
-    private double memoryclock;
+    private int coreclock;
+    private int memoryclock;
     private String memorytype;
     private int powerdraw;
     private boolean rgb;
+    private int price;
 
-    public gpu(String vendor, String make, String model, double coreclock, double memoryclock, String memorytype, int powerdraw) {
+    public gpu(String vendor, String make, String model, int coreclock, int memoryclock, String memorytype, int powerdraw, boolean rgb, int price) {
         this.vendor = vendor;
         this.make = make;
         this.model = model;
@@ -28,6 +29,8 @@ public class gpu {
         this.memoryclock = memoryclock;
         this.memorytype = memorytype;
         this.powerdraw = powerdraw;
+        this.rgb = rgb;
+        this.price = price;
     }
 
     public String getVendor() {
@@ -42,11 +45,11 @@ public class gpu {
         return model;
     }
 
-    public double getCoreclock() {
+    public int getCoreclock() {
         return coreclock;
     }
 
-    public double getMemoryclock() {
+    public int getMemoryclock() {
         return memoryclock;
     }
 
@@ -56,6 +59,14 @@ public class gpu {
 
     public int getPowerdraw() {
         return powerdraw;
+    }
+    
+    public boolean getRgb() {
+        return rgb;
+    }
+    
+    public int getPrice() {
+        return price;
     }
 
     public void setVendor(String vendor) {
@@ -70,11 +81,11 @@ public class gpu {
         this.model = model;
     }
 
-    public void setCoreclock(double coreclock) {
+    public void setCoreclock(int coreclock) {
         this.coreclock = coreclock;
     }
 
-    public void setMemoryclock(double memoryclock) {
+    public void setMemoryclock(int memoryclock) {
         this.memoryclock = memoryclock;
     }
 
@@ -85,12 +96,19 @@ public class gpu {
     public void setPowerdraw(int powerdraw) {
         this.powerdraw = powerdraw;
     }
+    
+    public void setRgb(boolean rgb) {
+        this.rgb = rgb;
+    }
+    
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     @Override
     public String toString() {
-        return "gpu{" + "vendor=" + vendor + ", make=" + make + ", model=" + model + ", coreclock=" + coreclock + ", memoryclock=" + memoryclock + ", memorytype=" + memorytype + ", powerdraw=" + powerdraw + '}';
+        return "gpu{" + "vendor=" + vendor + ", make=" + make + ", model=" + model + ", coreclock=" + coreclock + ", memoryclock=" + memoryclock + ", memorytype=" + memorytype + ", powerdraw=" + powerdraw + ", rgb=" + rgb + ", price=" + price + '}';
     }
-    
-    
+   
     
 }
