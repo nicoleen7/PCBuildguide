@@ -27,4 +27,13 @@ public class PCBuildguide {
     cpu i7 = new cpu("Intel", "i7-8700K", 3.7, 4.7, 6, 12, 95, "LGA1511", 350);
     cpu i9 = new cpu("Intel", "i9-7900X", 3.3, 4.3, 10, 20, 140, "LGA2066", 1000);
     
+    gpu RadeonRx480 = new gpu("AMD", "", "", 0.0, 0.0, "", 1);
+    gpu GeForceGTX180ti = new gpu("Nvidia", "", "", 0.0, 0.0, "", 1);
+    gpu GeForceGTX1502g = new gpu("", "", "", 0.0, 0.0, "", 1);
+    gpu GeForceGTX1070Gaming = new gpu("", "", "", 0.0, 0.0, "", 1);
+    gpu GeForceGTX1080mini = new gpu("", "", "", 0.0, 0.0, "", 1);
+    gpu RadeonRxVega56 = new gpu("AMD", "", "", 0.0, 0.0, "", 1);
+    gpu GeForceGTX1060 = new gpu("", "", "", 0.0, 0.0, "", 1);
+    gpu RadeonRx580GTS = new gpu("", "", "", 0.0, 0.0, "", 1);
+    
 }
