@@ -18,9 +18,10 @@ public class cpu {
     private int cores;
     private int threads;
     private int tdp;
-    private int socket;
+    private String socket;
+    private int price;
 
-    public cpu(String vendor, String model, double baseclock, double boostclock, int cores, int threads, int tdp, int socket) {
+    public cpu(String vendor, String model, double baseclock, double boostclock, int cores, int threads, int tdp, String socket, int price) {
         this.vendor = vendor;
         this.model = model;
         this.baseclock = baseclock;
@@ -29,6 +30,7 @@ public class cpu {
         this.threads = threads;
         this.tdp = tdp;
         this.socket = socket;
+        this.price = price;
     }
 
     public String getVendor() {
@@ -59,8 +61,12 @@ public class cpu {
         return tdp;
     }
 
-    public int getSocket() {
+    public String getSocket() {
         return socket;
+    }
+    
+    public int getPrice() {
+        return price;
     }
 
     public void setVendor(String vendor) {
@@ -91,13 +97,17 @@ public class cpu {
         this.tdp = tdp;
     }
 
-    public void setSocket(int socket) {
+    public void setSocket(String socket) {
         this.socket = socket;
+    }
+    
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return "cpu{" + "vendor=" + vendor + ", model=" + model + ", baseclock=" + baseclock + ", boostclock=" + boostclock + ", cores=" + cores + ", threads=" + threads + ", tdp=" + tdp + ", socket=" + socket + '}';
+        return "cpu{" + "vendor=" + vendor + ", model=" + model + ", baseclock=" + baseclock + ", boostclock=" + boostclock + ", cores=" + cores + ", threads=" + threads + ", tdp=" + tdp + ", socket=" + socket + ", price=" + price + '}';
     }
     
     
