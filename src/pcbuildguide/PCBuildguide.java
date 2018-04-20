@@ -36,4 +36,19 @@ public class PCBuildguide {
     gpu GeForceGTX1070 = new gpu("NVIDIA", "MSI", "GTX 1070 Gaming X 8G", 1607, 8108, "8GB GDDR5", 500, true, 400);
     gpu GeForceGTX1080ti = new gpu("NVIDIA", "EVGA", "GTX 1080 Ti FTW3 Gaming", 1569, 11016, "11GB GDDR5X", 600, true, 900);
     
+    //String vendor, String model, String formfactor, String involtage, int wattage, int price
+    powersupply Evga400W = new powersupply("Evga", "N1", "ATX", "100-240 VAC", 400, 35); //https://www.newegg.com/Product/Product.aspx?Item=9SIA6ZP3R86689
+    powersupply Evga600W = new powersupply("Evga", "B1", "ATX", "100-240 VAC", 600, 52); //https://www.newegg.com/Product/Product.aspx?Item=1B4-012V-00014 
+    powersupply Evga850W = new powersupply("Evga", "G3", "ATX", "100-240 VAC", 850, 170); //https://www.newegg.com/Product/Product.aspx?Item=9SIA6ZP56T4030
+    powersupply Evga1000W = new powersupply("Evga", "PQ", "ATX", "100-240 VAC", 1000, 209); //https://www.newegg.com/Product/Product.aspx?Item=N82E16817438137
+    
+    ram a = new ram("", "", "", 0.0, true, 0.0, 1); 
+    ram b = new ram("", "", "", 0.0, true, 0.0, 1); 
+    ram c = new ram("", "", "", 0.0, true, 0.0, 1);
+    ram d = new ram("", "", "", 0.0, true, 0.0, 1);
+    
+    storage aaa = new storage("", "", 0.0, "", 1);
+    storage bbb = new storage("", "", 0.0, "", 1);
+    storage ccc = new storage("", "", 0.0, "", 1);
+    storage ddd = new storage("", "", 0.0, "", 1);
 }
