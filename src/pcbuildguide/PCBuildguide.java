@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pcbuildguide;
+
+import java.util.Scanner;
 
 /**
  *
@@ -15,7 +13,37 @@ public class PCBuildguide {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String budget, FPS, resol, color, FF, GP, lighting;
+        Scanner scnr = new Scanner(System.in);
+        
+        System.out.println("Welcome to the personal Computer Builder!");
+        System.out.println("We will ask a few questions about specific computer components and based off your inputs, we will put together your ideal computer.");
+        
+        System.out.println("What is your desired budget? (low (500-1000), medium(1000,1500), high(1500 and up))");
+        budget = scnr.nextLine();
+        
+        System.out.println("What FPS are you looking for?");
+        FPS = scnr.nextLine();
+        
+        System.out.println("What resolution do you want?");
+        resol = scnr.nextLine();
+        
+        System.out.println("Do you have a desired color for your machine?");
+        color = scnr.nextLine();
+        
+        System.out.println("What is your desired form factor?");
+        FF = scnr.nextLine();
+        
+        System.out.println("Would you like a glass panel? (Y/N)");
+        GP = scnr.nextLine();
+        
+        System.out.println("Would you like interior lighting? (Y/N)");
+        lighting = scnr.nextLine();
+        
+        
+        
+        
+        System.out.println("Based off what you inputed, the recommended PC for you is: ");
     }
     
     cpu rz3 = new cpu("AMD", "Ryzen 3 1200", 3.1, 3.4, 4, 4, 65, "AM4", 100);
@@ -42,11 +70,13 @@ public class PCBuildguide {
     powersupply Evga850W = new powersupply("Evga", "G3", "ATX", "100-240 VAC", 850, 170); //https://www.newegg.com/Product/Product.aspx?Item=9SIA6ZP56T4030
     powersupply Evga1000W = new powersupply("Evga", "PQ", "ATX", "100-240 VAC", 1000, 209); //https://www.newegg.com/Product/Product.aspx?Item=N82E16817438137
     
+    //String vendor, String model, String platform, double frequency, boolean rgb, double voltage, int price
     ram a = new ram("", "", "", 0.0, true, 0.0, 1); 
     ram b = new ram("", "", "", 0.0, true, 0.0, 1); 
     ram c = new ram("", "", "", 0.0, true, 0.0, 1);
     ram d = new ram("", "", "", 0.0, true, 0.0, 1);
     
+    //String vendor, String model, double storage, String connectiontype, int price
     storage aaa = new storage("", "", 0.0, "", 1);
     storage bbb = new storage("", "", 0.0, "", 1);
     storage ccc = new storage("", "", 0.0, "", 1);
