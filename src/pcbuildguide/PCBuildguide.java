@@ -44,6 +44,7 @@ public class PCBuildguide {
         
         
         System.out.println("Based off what you inputed, the recommended PC for you is: ");
+        //show the components tha are in the PC
     }
     
     cpu rz3 = new cpu("AMD", "Ryzen 3 1200", 3.1, 3.4, 4, 4, 65, "AM4", 100);
