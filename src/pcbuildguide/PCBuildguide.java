@@ -65,21 +65,21 @@ public class PCBuildguide {
     gpu GeForceGTX1070 = new gpu("NVIDIA", "MSI", "GTX 1070 Gaming X 8G", 1607, 8108, "8GB GDDR5", 500, true, 400);
     gpu GeForceGTX1080ti = new gpu("NVIDIA", "EVGA", "GTX 1080 Ti FTW3 Gaming", 1569, 11016, "11GB GDDR5X", 600, true, 900);
     
-    //String vendor, String model, String formfactor, String involtage, int wattage, int price
-    powersupply Evga400W = new powersupply("Evga", "N1", "ATX", "100-240 VAC", 400, 35); //https://www.newegg.com/Product/Product.aspx?Item=9SIA6ZP3R86689
-    powersupply Evga600W = new powersupply("Evga", "B1", "ATX", "100-240 VAC", 600, 52); //https://www.newegg.com/Product/Product.aspx?Item=1B4-012V-00014 
-    powersupply Evga850W = new powersupply("Evga", "G3", "ATX", "100-240 VAC", 850, 170); //https://www.newegg.com/Product/Product.aspx?Item=9SIA6ZP56T4030
-    powersupply Evga1000W = new powersupply("Evga", "PQ", "ATX", "100-240 VAC", 1000, 209); //https://www.newegg.com/Product/Product.aspx?Item=N82E16817438137
+    powersupply Evga400W = new powersupply("EVGA", 400, 33);
+    powersupply Evga600W = new powersupply("EVGA", 600, 53); 
+    powersupply Evga850W = new powersupply("EVGA SuperNOVA", 850, 170);
+    powersupply Evga1000W = new powersupply("EVGA superNOVA 1000", 1000, 210);
     
-    //String vendor, String model, String platform, double frequency, boolean rgb, double voltage, int price
-    ram a = new ram("", "", "", 0.0, true, 0.0, 1); 
-    ram b = new ram("", "", "", 0.0, true, 0.0, 1); 
-    ram c = new ram("", "", "", 0.0, true, 0.0, 1);
-    ram d = new ram("", "", "", 0.0, true, 0.0, 1);
+    //String vendor, String model, String platform, int frequency, boolean rgb, double voltage, int channels, int price
+    ram ripjawsv = new ram("G.Skill", "Ripjaws V", "DDR4", 8, 2400, false, 1.2, 2, 92); 
+    ram gammix = new ram("ADATA", "XPG Gammix", "DDR4", 16, 2666, false, 1.2, 2, 158); 
+    ram vengance = new ram("Corsair", "Vengance", "DDR4", 16, 3200, true, 1.35, 2, 210);
+    ram tridentz = new ram("G.Skill", "TridentZ", "DDR4", 32, 3000, true, 1.35, 4, 375);
     
-    //String vendor, String model, double storage, String connectiontype, int price
-    storage aaa = new storage("", "", 0.0, "", 1);
-    storage bbb = new storage("", "", 0.0, "", 1);
-    storage ccc = new storage("", "", 0.0, "", 1);
-    storage ddd = new storage("", "", 0.0, "", 1);
+    //String vendor, String model, int storage, String type, price
+    storage ssd120 = new storage("ADATA", "Ultimate", 120, "SSD", 37);
+    storage ssd480 = new storage("Samsung", "860 EVO", 500, "SSD", 145);
+    storage ssd1000 = new storage("Team Group", "L5 Lite", 1000, "SSD", 220);
+    storage hdd1000 = new storage("Seagate", "Barracuda", 1000, "HDD", 45);
+    storage hdd2000 = new storage("WD", "Blue", 1000, "HDD", 60);
 }

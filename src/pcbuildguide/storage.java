@@ -13,14 +13,16 @@ public class storage {
     
     private String vendor;
     private String model;
-    private double storage;
-    private String connectiontype;
+    private int storage;
+    private String type;
+    private int price;
 
-    public storage(String vendor, String model, double storage, String connectiontype) {
+    public storage(String vendor, String model, int storage, String type, int price) {
         this.vendor = vendor;
         this.model = model;
         this.storage = storage;
-        this.connectiontype = connectiontype;
+        this.type = type;
+        this.price = price;
     }
 
     public String getVendor() {
@@ -31,12 +33,16 @@ public class storage {
         return model;
     }
 
-    public double getStorage() {
+    public int getStorage() {
         return storage;
     }
 
-    public String getConnectiontype() {
-        return connectiontype;
+    public String getType() {
+        return type;
+    }
+    
+    public int getPrice() {
+        return price;
     }
 
     public void setVendor(String vendor) {
@@ -47,12 +53,21 @@ public class storage {
         this.model = model;
     }
 
-    public void setStorage(double storage) {
+    public void setStorage(int storage) {
         this.storage = storage;
     }
 
-    public void setConnectiontype(String connectiontype) {
-        this.connectiontype = connectiontype;
+    public void setType(String type) {
+        this.type = type;
     }
     
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "storage{" + "vendor=" + vendor + ", model=" + model + ", storage=" + storage + ", type=" + type + ", price=" + price + '}';
+    }
+  
 }
