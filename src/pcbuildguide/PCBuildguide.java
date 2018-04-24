@@ -1,6 +1,7 @@
 
 package pcbuildguide;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -13,40 +14,7 @@ public class PCBuildguide {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String budget, FPS, resol, color, FF, GP, lighting;
-        Scanner scnr = new Scanner(System.in);
         
-        System.out.println("Welcome to the personal Computer Builder!");
-        System.out.println("We will ask a few questions about specific computer components and based off your inputs, we will put together your ideal computer.");
-        
-        System.out.println("What is your desired budget? (low (500-1000), medium(1000,1500), high(1500 and up))");
-        budget = scnr.nextLine();
-        
-        System.out.println("What FPS are you looking for?");
-        FPS = scnr.nextLine();
-        
-        System.out.println("What resolution do you want?");
-        resol = scnr.nextLine();
-        
-        System.out.println("Do you have a desired color for your machine?");
-        color = scnr.nextLine();
-        
-        System.out.println("What is your desired form factor?");
-        FF = scnr.nextLine();
-        
-        System.out.println("Would you like a glass panel? (Y/N)");
-        GP = scnr.nextLine();
-        
-        System.out.println("Would you like interior lighting? (Y/N)");
-        lighting = scnr.nextLine();
-        
-        
-        
-        
-        System.out.println("Based off what you inputed, the recommended PC for you is: ");
-        //show the components tha are in the PC
-    }
-    
     cpu rz3 = new cpu("AMD", "Ryzen 3 1200", 3.1, 3.4, 4, 4, 65, "AM4", 100);
     cpu rz5 = new cpu("AMD", "Ryzen 5 1600", 3.2, 3.6, 6, 12, 65, "AM4", 180);
     cpu rz7 = new cpu("AMD", "Ryzen 7 1700", 3, 3.7, 8, 16, 65, "AM4", 260);
@@ -82,4 +50,113 @@ public class PCBuildguide {
     storage ssd1000 = new storage("Team Group", "L5 Lite", 1000, "SSD", 220);
     storage hdd1000 = new storage("Seagate", "Barracuda", 1000, "HDD", 45);
     storage hdd2000 = new storage("WD", "Blue", 1000, "HDD", 60);
+    
+    games Minecraft = new games("Minecraft","2009");
+    games GTA = new games("Grand Theft Auto 5", "2013");
+    games PubG = new games("PlayerUnknown Battlegrounds", "2017");
+    games Overwatch = new games("Overwatch","2016");
+    games Fortnite = new games("Fortnite", "2017");
+    games LoL = new games("League of Legends", "2009");
+    games RL = new games("Rocket League", "2015");
+    games FC5 = new games("Far Cry 5", "2018");
+    games CoD = new games("Call of Duty WW2", "2017");
+    games MLB = new games("MLB The Show '18", "2018");
+    
+    cases white = new cases("White", "NZXT", "S340", 75);
+    cases black = new cases("Black", "Thermaltake", "View 31", 105);
+    cases red = new cases("Red", "Corsair", "Carbide SPEC-02", 60);
+    cases blue = new cases("Blue", "DeepCool", "TX", 50);
+    
+    ArrayList<cpu> cpus = new ArrayList();
+    
+    cpus.add(rz3);
+    cpus.add(rz5);
+    cpus.add(rz7);
+    cpus.add(thrdrp);
+    cpus.add(i3);
+    cpus.add(i5);
+    cpus.add(i7);
+    cpus.add(i9);
+    
+    ArrayList<gpu> gpus = new ArrayList<gpu>();
+    
+    gpus.add(RadeonRx460);
+    gpus.add(RadeonRx570);
+    gpus.add(RadeonRx580);
+    gpus.add(RadeonRxVega64);
+    gpus.add(GeForceGTX1050ti);
+    gpus.add(GeForceGTX1060);
+    gpus.add(GeForceGTX1070);
+    gpus.add(GeForceGTX1080ti);
+    
+    ArrayList<powersupply> psu = new ArrayList<powersupply>();
+    
+    psu.add(Evga400W);
+    psu.add(Evga600W);
+    psu.add(Evga850W);
+    psu.add(Evga1000W);
+    
+    ArrayList<ram> rams = new ArrayList<ram>();
+    
+    rams.add(ripjawsv);
+    rams.add(gammix);
+    rams.add(vengance);
+    rams.add(tridentz);
+    
+    ArrayList<storage> storages = new ArrayList<storage>();
+    
+    storages.add(ssd120);
+    storages.add(ssd480);
+    storages.add(ssd1000);
+    storages.add(hdd1000);
+    storages.add(hdd2000);
+    
+    ArrayList<games> game = new ArrayList<games>();
+    
+    game.add(Minecraft);
+    game.add(GTA);
+    game.add(PubG);
+    game.add(Overwatch);
+    game.add(Fortnite);
+    game.add(LoL);
+    game.add(RL);
+    game.add(FC5);
+    game.add(CoD);
+    game.add(MLB);
+    
+        
+        String budget, game1, game2, game3, FPS, resol, color, lighting;
+        Scanner scnr = new Scanner(System.in);
+        
+        System.out.println("Welcome to the personal Computer Builder!");
+        System.out.println("We will ask a few questions about specific computer components and based off your inputs, we will put together your ideal computer.");
+        
+        System.out.println("What is your desired budget? (low (500-1000), medium(1000,1500), high(1500 and up))");
+        budget = scnr.nextLine();
+        
+        System.out.println("Pick three games from this list of 10:");
+        game1 = scnr.nextLine();
+        game2 = scnr.nextLine();
+        game3 = scnr.nextLine();
+        
+        System.out.println("What FPS are you looking for?");
+        FPS = scnr.nextLine();
+        
+        
+        System.out.println("What resolution do you want?");
+        resol = scnr.nextLine();
+        
+        System.out.println("What is your desired color for your machine?");
+        color = scnr.nextLine();
+        
+        System.out.println("Would you like interior lighting? (Y/N)");
+        lighting = scnr.nextLine();
+        
+        
+        System.out.println("Based off what you inputed, the recommended PC for you is: ");
+        //show the components tha are in the PC
+    }
+    
+    
+    
 }
