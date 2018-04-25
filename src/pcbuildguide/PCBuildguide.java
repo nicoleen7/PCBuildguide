@@ -135,6 +135,7 @@ public class PCBuildguide {
         budget = scnr.nextLine();
         
         System.out.println("Pick three games from this list of 10:");
+        System.out.println(game.toString());
         game1 = scnr.nextLine();
         game2 = scnr.nextLine();
         game3 = scnr.nextLine();
