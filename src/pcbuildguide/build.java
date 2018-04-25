@@ -26,11 +26,13 @@ public class build {
         
     
     }
+
+    @Override
+    public String toString() {
+        return "build{" + "cpuFinal=" + cpuFinal + ", gpuFinal=" + gpuFinal + ", psFinal=" + psFinal + ", ramFinal=" + ramFinal + ", storageFinal=" + storageFinal + '}';
+    }
     
-    Random rand = new Random();
     
-    
-    //build build1 = new build(rz3, RadeonRx460, Evga400W, ripjawsv, ssd120);
     
     
 }

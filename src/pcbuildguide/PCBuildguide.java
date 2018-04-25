@@ -66,7 +66,21 @@ public class PCBuildguide {
         cases black = new cases("Black", "Thermaltake", "View 31", 105);
         cases red = new cases("Red", "Corsair", "Carbide SPEC-02", 60);
         cases blue = new cases("Blue", "DeepCool", "TX", 50);
-
+        
+        build build1 = new build(rz3, RadeonRx460, Evga400W, ripjawsv, ssd120);
+        build build2 = new build(rz5, RadeonRxVega64, Evga600W, vengance, ssd480);
+        build build3 = new build(rz7, GeForceGTX1070, Evga850W, tridentz, ssd1000);
+        build build4 = new build(thrdrp, GeForceGTX1080ti, Evga1000W, vengance, hdd1000);
+        build build5 = new build(i3, GeForceGTX1060, Evga600W, gammix, hdd2000);
+        build build6 = new build(i5, RadeonRx580, Evga400W, ripjawsv, ssd480);
+        build build7 = new build(i7, GeForceGTX1050ti, Evga850W, gammix, ssd1000);
+        build build8 = new build(i9, RadeonRx570, Evga1000W, ripjawsv, hdd2000);
+        build build9 = new build(i7, RadeonRxVega64, Evga850W, tridentz, ssd1000);
+        build build10 = new build(i5, GeForceGTX1070, Evga600W, vengance, hdd1000);
+        build build11 = new build(i9, GeForceGTX1080ti, Evga850W, tridentz, ssd480);
+        
+        
+        
         ArrayList<cpu> cpus = new ArrayList();
 
         cpus.add(rz3);
@@ -123,6 +137,8 @@ public class PCBuildguide {
         game.add(FC5);
         game.add(CoD);
         game.add(MLB);
+        
+        
     
         
         String budget, game1, game2, game3, FPS, resol, color, lighting;
