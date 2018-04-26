@@ -7,7 +7,7 @@ package pcbuildguide;
 
 /**
  *
- * @author nicholasroberto
+ * @author nicholasroberto and geoffreysalfi
  */
 public class ram {
     
@@ -20,8 +20,9 @@ public class ram {
     private double voltage;
     private int channels;
     private int price;
+    private int num;
 
-    public ram(String vendor, String model, String platform, int size, int frequency, boolean rgb, double voltage, int channels, int price) {
+    public ram(String vendor, String model, String platform, int size, int frequency, boolean rgb, double voltage, int channels, int price, int num) {
         this.vendor = vendor;
         this.model = model;
         this.platform = platform;
@@ -31,6 +32,7 @@ public class ram {
         this.voltage = voltage;
         this.channels = channels;
         this.price = price;
+        this.num = num;
     }
 
     public String getVendor() {
@@ -68,6 +70,10 @@ public class ram {
     public int getPrice() {
         return price;
     }
+    
+    public int getNum() {
+        return num;
+    }
 
     public void setVendor(String vendor) {
         this.vendor = vendor;
@@ -103,6 +109,10 @@ public class ram {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+    
+    public void setNum(int num) {
+        this.num = num;
     }
 
     @Override

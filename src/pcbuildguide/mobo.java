@@ -9,45 +9,55 @@ package pcbuildguide;
  *
  * @author nicholasroberto and geoffreysalfi
  */
-public class powersupply {
+public class mobo {
     
+    private String make;
     private String model;
-    private int watts;
+    private String socket;
     private int price;
 
-    public powersupply(String model, int watts, int price) {
+    public mobo(String make, String model, String socket, int price) {
+        this.make = make;
         this.model = model;
-        this.watts = watts;
+        this.socket = socket;
         this.price = price;
+    }
+    
+    public String getMake() {
+        return make;
     }
 
     public String getModel() {
         return model;
     }
 
-    public int getWatts() {
-        return watts;
+    public String getSocket() {
+        return socket;
     }
 
     public int getPrice() {
         return price;
     }
 
+    public void setMake(String make) {
+        this.make = make;
+    }
+
     public void setModel(String model) {
         this.model = model;
     }
 
-    public void setWatts(int watts) {
-        this.watts = watts;
+    public void setSocket(String socket) {
+        this.socket = socket;
     }
 
     public void setPrice(int price) {
         this.price = price;
     }
-
+    
     @Override
     public String toString() {
-        return "powersupply{" + "model=" + model + ", watts=" + watts + ", price=" + price + '}';
+        return "mobo{" + "make=" + make + ", model=" + model + ", socket=" + socket + ", price=" + price + '}';
     }
-   
+        
 }

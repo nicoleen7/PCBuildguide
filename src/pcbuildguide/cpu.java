@@ -7,7 +7,7 @@ package pcbuildguide;
 
 /**
  *
- * @author nicholasroberto
+ * @author nicholasroberto and geoffreysalfi
  */
 public class cpu {
     
@@ -20,8 +20,10 @@ public class cpu {
     private int tdp;
     private String socket;
     private int price;
+    private mobo mobo;
+    private int num;
 
-    public cpu(String vendor, String model, double baseclock, double boostclock, int cores, int threads, int tdp, String socket, int price) {
+    public cpu(String vendor, String model, double baseclock, double boostclock, int cores, int threads, int tdp, String socket, int price, mobo mobo, int num) {
         this.vendor = vendor;
         this.model = model;
         this.baseclock = baseclock;
@@ -31,6 +33,8 @@ public class cpu {
         this.tdp = tdp;
         this.socket = socket;
         this.price = price;
+        this.mobo = mobo;
+        this.num = num;
     }
 
     public String getVendor() {
@@ -68,7 +72,15 @@ public class cpu {
     public int getPrice() {
         return price;
     }
+    
+    public mobo getMobo() {
+        return mobo;
+    }
 
+    public int getNum() {
+        return num;
+    }
+    
     public void setVendor(String vendor) {
         this.vendor = vendor;
     }
@@ -104,11 +116,18 @@ public class cpu {
     public void setPrice(int price) {
         this.price = price;
     }
+    
+    public void setMobo(mobo mobo){
+        this.mobo = mobo;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
 
     @Override
     public String toString() {
-        return "cpu{" + "vendor=" + vendor + ", model=" + model + ", baseclock=" + baseclock + ", boostclock=" + boostclock + ", cores=" + cores + ", threads=" + threads + ", tdp=" + tdp + ", socket=" + socket + ", price=" + price + '}';
+        return "cpu{" + "vendor=" + vendor + ", model=" + model + ", baseclock=" + baseclock + ", boostclock=" + boostclock + ", cores=" + cores + ", threads=" + threads + ", tdp=" + tdp + ", socket=" + socket + ", price=" + price + ", mobo=" + mobo + ", num=" + num + '}';
     }
-    
     
 }

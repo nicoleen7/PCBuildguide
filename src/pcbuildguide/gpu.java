@@ -7,7 +7,7 @@ package pcbuildguide;
 
 /**
  *
- * @author nicholasroberto
+ * @author nicholasroberto and geoffreysalfi
  */
 public class gpu {
     
@@ -20,8 +20,9 @@ public class gpu {
     private int powerdraw;
     private boolean rgb;
     private int price;
+    private int num;
 
-    public gpu(String vendor, String make, String model, int coreclock, int memoryclock, String memorytype, int powerdraw, boolean rgb, int price) {
+    public gpu(String vendor, String make, String model, int coreclock, int memoryclock, String memorytype, int powerdraw, boolean rgb, int price, int num) {
         this.vendor = vendor;
         this.make = make;
         this.model = model;
@@ -31,6 +32,7 @@ public class gpu {
         this.powerdraw = powerdraw;
         this.rgb = rgb;
         this.price = price;
+        this.num = num;
     }
 
     public String getVendor() {
@@ -68,6 +70,10 @@ public class gpu {
     public int getPrice() {
         return price;
     }
+    
+    public int getNum() {
+        return num;
+    }
 
     public void setVendor(String vendor) {
         this.vendor = vendor;
@@ -103,6 +109,10 @@ public class gpu {
     
     public void setPrice(int price) {
         this.price = price;
+    }
+    
+    public void setNum(int num) {
+        this.num = num;
     }
 
     @Override

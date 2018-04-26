@@ -7,7 +7,7 @@ package pcbuildguide;
 
 /**
  *
- * @author nicholasroberto
+ * @author nicholasroberto and geoffreysalfi
  */
 public class storage {
     
@@ -44,7 +44,7 @@ public class storage {
     public int getPrice() {
         return price;
     }
-
+    
     public void setVendor(String vendor) {
         this.vendor = vendor;
     }
@@ -64,7 +64,7 @@ public class storage {
     public void setPrice(int price) {
         this.price = price;
     }
-
+    
     @Override
     public String toString() {
         return "storage{" + "vendor=" + vendor + ", model=" + model + ", storage=" + storage + ", type=" + type + ", price=" + price + '}';
