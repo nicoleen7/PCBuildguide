@@ -1,8 +1,7 @@
 
 package pcbuildguide;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *
@@ -34,9 +33,14 @@ public class PCBuildguide {
         game2 = scnr.nextLine();
         game3 = scnr.nextLine();
         
-        System.out.println("What FPS are you looking for?");
-        
-        FPS = scan.nextInt();
+        System.out.println("What FPS are you looking for? (please enter a number)");
+        //attempted a try catch but then gave me an error saying that the variable FPS may not be initialized.
+        //try{
+            FPS = scan.nextInt();
+        //}
+        //catch(InputMismatchException e){
+            //System.out.println("Please enter a number.");
+       // }
                 
         System.out.println("What resolution do you want? 1080p, 1440p, 2160p (4K)?");
         resol = scnr.nextLine();
