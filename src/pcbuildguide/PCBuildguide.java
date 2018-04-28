@@ -15,6 +15,31 @@ public class PCBuildguide {
     public static void main(String[] args) {
        
         //String vendor, String model, int storage, String type, price
+        
+        games Minecraft = new games("Minecraft","2009", 1);
+        games GTA = new games("Grand Theft Auto 5", "2013", 2);
+        games PubG = new games("PlayerUnknown Battlegrounds", "2017", 2);
+        games Overwatch = new games("Overwatch","2016", 1);
+        games Fortnite = new games("Fortnite", "2017", 1);
+        games LoL = new games("League of Legends", "2009", 1);
+        games RL = new games("Rocket League", "2015", 1);
+        games FC5 = new games("Far Cry 5", "2018", 2);
+        games CoD = new games("Call of Duty WW2", "2017", 2);
+        games MLB = new games("MLB The Show '18", "2018", 2);
+    
+        ArrayList<games> game = new ArrayList<>();
+
+        game.add(Minecraft);
+        game.add(GTA);
+        game.add(PubG);
+        game.add(Overwatch);
+        game.add(Fortnite);
+        game.add(LoL);
+        game.add(RL);
+        game.add(FC5);
+        game.add(CoD);
+        game.add(MLB);
+        
                  
         String budget, resol, color, game1, game2, game3;
         int FPS;
@@ -28,7 +53,7 @@ public class PCBuildguide {
         budget = scnr.nextLine();
         
         System.out.println("Pick three games from this list of 10 and press enter after each one:");
-        System.out.println();
+        System.out.println(game);
         game1 = scnr.nextLine();
         game2 = scnr.nextLine();
         game3 = scnr.nextLine();
@@ -58,9 +83,14 @@ public class PCBuildguide {
         storage ssd120 = new storage("ADATA", "Ultimate", 120, "SSD", 37);
         cases white = new cases("White", "NZXT", "S340", 75);
         
+        
+        //The program is able to run, and you can follow through the steps that the program asks, but produces an error at the end.
+        //This was something we spent a long time trying to figure out but were not able to.
         build yourbuild = new build(rz3, RadeonRx460, Evga400W, ripjawsv, ssd120, white);
         yourbuild.decide(budget, FPS, resol, color);
         yourbuild.toString();
+        yourbuild.test1();
+        yourbuild.test2();
         //show the components that are in the PC
         
     }
